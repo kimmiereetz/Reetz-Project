@@ -1,5 +1,6 @@
 clear all
 clc
+
 % Setting up grid number of nodes N determines the fine-ness of the mesh
 % the larger N the finer the mesh
 
@@ -30,7 +31,7 @@ c=(1-2*a);
 % produce vectors.
 %The Dirichlet boundary condition at x=0.
 PHIab=cos(pi*y).*cosh(2*pi-y);
-%The Dirichlet boundary condition at x=2?.
+%The Dirichlet boundary condition at x=2π.
 PSIab=y.^2.*sin(y/4);
 %The Dirichlet boundary conditions are imposed on the grid boundaries while
 % the initial condition is imposed on the interior points of the grid. 
@@ -153,4 +154,4 @@ end
 % Norms at Nodes of N 2N 4N 16N are calculted until the solution truncates 
 % The minimum difference in L2 Norms is calculated to determine the sweet
 % spot for the numerical solution
-gi=norm(U,2);
+gi=norm(U,2); 
